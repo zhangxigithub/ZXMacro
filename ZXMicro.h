@@ -1,76 +1,43 @@
-//项目的基本配置
-//在xxxx-Profix.pch中引用
-
-
-
-#define kVersion @"1"
-#define kDevice  @"iPhone"
-
-
-
 
 
 #ifdef DEBUG
-#define clientURL @"http://yiqiwan.kuxun.cn/interfacev2/"
-//#define clientURL @"http://10.30.0.118/interfacev2/"
+//Debug模式
+//...
+
 
 #else
+//发布模式
+//...
 
-#define clientURL @"http://yiqiwan.kuxun.cn/interfacev2/"
+//屏蔽NSLog
 #define NSLog(...) {};
 
 #endif
 
 
 
-//URL
-#define kURL_Localhost [NSURL URLWithString:@"127.0.0.1"]
-
-
-
-
-
-//color
-#define kColor_Red       [UIColor redColor]
-#define kColor_Gray      RGB(213,215,217)
-#define kColor_Blue      RGB(23,183,218)
-#define kColor_Orange    RGB(216,89,12)
-#define kColor_TextGray  RGB(83,83,83)
-
-
-//frame
-#define kFrame_Zero CGRectMake(0, 0, 0, 0)
-
-
-
-
 
 //****************************  工具相关 ↓ ***************************************
 
-//调适信息
-#define LOGFRAME(view)     NSLog(@"\nx:%f\ny:%f\nwidth:%f\nheight:%f\n",view.frame.origin.x,view.frame.origin.y,view.frame.size.width,view.frame.size.height);
-#define ALERT(msg) [[[UIAlertView alloc] initWithTitle:nil message:msg delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil] show];
+//输出frame(frame是结构体，没法%@)
+#define LOGFRAME(view) NSLog(@"\nx:%f\ny:%f\nwidth:%f\nheight:%f\n",view.frame.origin.x,view.frame.origin.y,view.frame.size.width,view.frame.size.height)
 
+//弹出信息
+#define ALERT(msg) [[[UIAlertView alloc] initWithTitle:nil message:msg delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil] show]
 
 
 //App
-#define kApp (AppDelegate *)[UIApplication sharedApplication].delegate
-#define kNav (AppDelegate *)[UIApplication sharedApplication].delegate.navigationController
-#define LOADING(view) [MBProgressHUD showHUDAddedTo:view animated:NO];
-#define STOP(view)    [MBProgressHUD hideAllHUDsForView:view animated:YES];
+#define kApp ((AppDelegate *)[UIApplication sharedApplication].delegate)
+#define kNav ((AppDelegate *)[UIApplication sharedApplication].delegate.navigationController)
 
 //转换
 #define I2S(number) [NSString stringWithFormat:@"%d",number]
 #define F2S(number) [NSString stringWithFormat:@"%f",number]
 #define DATE(stamp) [NSDate dateWithTimeIntervalSince1970:[stamp intValue]];
 
-//color
-#define RGB(r, g, b)             [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
-#define RGBAlpha(r, g, b, a)     [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:(a)]
 
 
-
-//frame
+//设备屏幕尺寸
 #define kScreen_Height   ([UIScreen mainScreen].bounds.size.height)
 #define kScreen_Width    ([UIScreen mainScreen].bounds.size.width)
 #define kScreen_Frame    (CGRectMake(0, 0 ,kScreen_Width,kScreen_Height))
@@ -78,12 +45,19 @@
 #define kScreen_CenterY  kScreen_Height/2
 
 
+
+//应用尺寸(不包括状态栏)
 #define kContent_Height   ([UIScreen mainScreen].applicationFrame.size.height)
 #define kContent_Width    ([UIScreen mainScreen].applicationFrame.size.width)
 #define kContent_Frame    (CGRectMake(0, 0 ,kContent_Width,kContent_Height))
 #define kContent_CenterX  kContent_Width/2
 #define kContent_CenterY  kContent_Height/2
 
+
+
+/*
+类似九宫格的九个点
+*/
 #define kP1 CGPointMake(0                 ,0)
 #define kP2 CGPointMake(kContent_Width/2  ,0)
 #define kP3 CGPointMake(kContent_Width    ,0)
@@ -96,18 +70,6 @@
 
 //*********************************************
 
-#define API(api) [[api objectForKey:@"apicode"]intValue]
-#define DATA(data) [data objectForKey:@"data"]
-
-//release屏蔽NSLog
-#ifdef DEBUG
-
-
-#else
-#define NSLog(...) {};
-#endif
-
-
 
 //GCD
 #define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
@@ -115,19 +77,22 @@
 
 
 //Device
-#define isRetina ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define isRetina ([[UIScreen mainScreen] scale]==2)
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
-//#define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
+
+//拨打电话
 #define canTel                 ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel:"]])
 #define tel(phoneNumber)       ([[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",phoneNumber]]])
 #define telprompt(phoneNumber) ([[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"telprompt:%@",phoneNumber]]])
 
-#define canOpenApp(appScheme) ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:appScheme]])
-#define openApp(appScheme) ([[UIApplication sharedApplication] openURL:[NSURL URLWithString:appScheme]])
+//打开URL
+#define canOpenURL(appScheme) ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:appScheme]])
+#define openURL(appScheme) ([[UIApplication sharedApplication] openURL:[NSURL URLWithString:appScheme]])
+
 
 //区分模拟器和真机
-
 #if TARGET_OS_IPHONE
 //iPhone Device
 #endif
