@@ -18,7 +18,7 @@
     
     if(isRetina) ALERT(@"retina");
     else ALERT(@"normal");
-    
+
     
     
     NSLog(@"%@",kApp.window);

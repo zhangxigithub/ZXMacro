@@ -16,8 +16,9 @@
 
 
 
+//数学
 
-//****************************  工具相关 ↓ ***************************************
+#define PI 3.14159
 
 //输出frame(frame是结构体，没法%@)
 #define LOGFRAME(view) NSLog(@"\nx:%f\ny:%f\nwidth:%f\nheight:%f\n",view.frame.origin.x,view.frame.origin.y,view.frame.size.width,view.frame.size.height)
