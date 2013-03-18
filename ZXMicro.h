@@ -1,5 +1,3 @@
-
-
 #ifdef DEBUG
 //Debug模式
 //...
@@ -17,7 +15,6 @@
 
 
 //数学
-
 #define PI 3.14159
 
 //输出frame(frame是结构体，没法%@)
@@ -78,6 +75,15 @@
 
 
 //Device
+#define isIOS4 ([[[UIDevice currentDevice] systemVersion] intValue]==4)
+#define isIOS5 ([[[UIDevice currentDevice] systemVersion] intValue]==5)
+#define isIOS6 ([[[UIDevice currentDevice] systemVersion] intValue]==6)
+#define isAfterIOS4 ([[[UIDevice currentDevice] systemVersion] intValue]>4)
+#define isAfterIOS5 ([[[UIDevice currentDevice] systemVersion] intValue]>5)
+#define isAfterIOS6 ([[[UIDevice currentDevice] systemVersion] intValue]>6)
+
+#define iOS ([[[UIDevice currentDevice] systemVersion] floatValue])
+
 #define isRetina ([[UIScreen mainScreen] scale]==2)
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 #define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
