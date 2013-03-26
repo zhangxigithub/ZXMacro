@@ -32,7 +32,7 @@
 		439ED47916F32105009314EB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		439ED47B16F32105009314EB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		439ED47D16F32105009314EB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		439ED48416F32116009314EB /* ZXMicro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZXMicro.h; path = ../../ZXMicro.h; sourceTree = "<group>"; };
+		439ED48416F32116009314EB /* ZXMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZXMacro.h; path = ../../ZXMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 		439ED46D16F32105009314EB /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				439ED48416F32116009314EB /* ZXMicro.h */,
+				439ED48416F32116009314EB /* ZXMacro.h */,
 				439ED47616F32105009314EB /* AppDelegate.h */,
 				439ED47716F32105009314EB /* AppDelegate.m */,
 				439ED46E16F32105009314EB /* Supporting Files */,

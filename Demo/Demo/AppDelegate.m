@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ZXMicro.h"
+#import "ZXMacro.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
