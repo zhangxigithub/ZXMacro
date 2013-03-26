@@ -1,3 +1,19 @@
+/*
+ 
+ ZXMicro.h
+ 
+ 使用方法：
+ ＊需要时import
+ ＊添加到-Prefix.pch文件中,所有类中都可以使用
+ 
+ http://zhangxi.me
+ 
+ https://github.com/zhangxigithub/ZXMicro
+ 
+ 2013.3.26
+ */
+
+
 //------------------------------------Debug/Release
 #ifdef DEBUG
 //Debug模式
