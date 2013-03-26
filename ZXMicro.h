@@ -13,6 +13,8 @@
 #endif
 
 
+//Image
+#define ResizableImage(name,top,left,bottom,right) [[UIImage imageNamed:name] resizableImageWithCapInsets:UIEdgeInsetsMake(top,left,bottom,right)]
 
 //数学
 #define PI 3.14159
