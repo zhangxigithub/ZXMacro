@@ -1,3 +1,4 @@
+//------------------------------------Debug/Release
 #ifdef DEBUG
 //Debug模式
 //...
@@ -13,7 +14,28 @@
 #endif
 
 
+//------------------------------------Simulator/Device
+//区分模拟器和真机
+#if TARGET_OS_IPHONE
+//iPhone Device
+#endif
+
+#if TARGET_IPHONE_SIMULATOR
+//iPhone Simulator
+#endif
+
+//------------------------------------ARC/no RAC
+//ARC
+#if __has_feature(objc_arc)
+//compiling with ARC
+#else
+// compiling without ARC
+#endif
+
+
 //Image
+//可拉伸的图片
+
 #define ResizableImage(name,top,left,bottom,right) [[UIImage imageNamed:name] resizableImageWithCapInsets:UIEdgeInsetsMake(top,left,bottom,right)]
 #define ResizableImageWithMode(name,top,left,bottom,right,mode) [[UIImage imageNamed:name] resizableImageWithCapInsets:UIEdgeInsetsMake(top,left,bottom,right) resizingMode:mode]
 
@@ -50,8 +72,7 @@
 #define kScreen_CenterY  kScreen_Height/2
 
 
-
-//应用尺寸(不包括状态栏)
+//应用尺寸(不包括状态栏,通话时状态栏高度不是20，所以需要知道具体尺寸)
 #define kContent_Height   ([UIScreen mainScreen].applicationFrame.size.height)
 #define kContent_Width    ([UIScreen mainScreen].applicationFrame.size.width)
 #define kContent_Frame    (CGRectMake(0, 0 ,kContent_Width,kContent_Height))
@@ -113,19 +134,3 @@
 #define openURL(appScheme) ([[UIApplication sharedApplication] openURL:[NSURL URLWithString:appScheme]])
 
 
-//区分模拟器和真机
-#if TARGET_OS_IPHONE
-//iPhone Device
-#endif
-
-#if TARGET_IPHONE_SIMULATOR
-//iPhone Simulator
-#endif
-
-
-//ARC
-#if __has_feature(objc_arc)
-//compiling with ARC
-#else
-// compiling without ARC
-#endif
