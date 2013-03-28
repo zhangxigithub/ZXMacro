@@ -20,9 +20,13 @@
     
 
     
-    
-    //self.window.root
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"text" ofType:@"text"];
+    NSString *string = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
 
+    ;
+    
+    NSLog(@"%@",string);
+    NSLog(@"%@",FileString(@"text", @"text"));
     
     self.window.backgroundColor = HexRGB(0x187eb4);
     self.window.backgroundColor = HexRGBAlpha(0x187eb4,0.5);

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4315BFEE17041F7900FDBF1A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 439ED47716F32105009314EB /* AppDelegate.m */; };
+		4315BFF01704215C00FDBF1A /* text.text in Resources */ = {isa = PBXBuildFile; fileRef = 4315BFEF1704215C00FDBF1A /* text.text */; };
 		439ED46816F32105009314EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439ED46716F32105009314EB /* UIKit.framework */; };
 		439ED46A16F32105009314EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439ED46916F32105009314EB /* Foundation.framework */; };
 		439ED46C16F32105009314EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439ED46B16F32105009314EB /* CoreGraphics.framework */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4315BFEF1704215C00FDBF1A /* text.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.text; sourceTree = "<group>"; };
 		439ED46416F32105009314EB /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439ED46716F32105009314EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		439ED46916F32105009314EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				439ED48416F32116009314EB /* ZXMacro.h */,
+				4315BFEF1704215C00FDBF1A /* text.text */,
 				439ED47616F32105009314EB /* AppDelegate.h */,
 				439ED47716F32105009314EB /* AppDelegate.m */,
 				439ED46E16F32105009314EB /* Supporting Files */,
@@ -156,6 +159,7 @@
 				439ED47A16F32105009314EB /* Default.png in Resources */,
 				439ED47C16F32105009314EB /* Default@2x.png in Resources */,
 				439ED47E16F32105009314EB /* Default-568h@2x.png in Resources */,
+				4315BFF01704215C00FDBF1A /* text.text in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
