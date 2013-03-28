@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4315BFEE17041F7900FDBF1A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 439ED47716F32105009314EB /* AppDelegate.m */; };
 		439ED46816F32105009314EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439ED46716F32105009314EB /* UIKit.framework */; };
 		439ED46A16F32105009314EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439ED46916F32105009314EB /* Foundation.framework */; };
 		439ED46C16F32105009314EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439ED46B16F32105009314EB /* CoreGraphics.framework */; };
 		439ED47216F32105009314EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 439ED47016F32105009314EB /* InfoPlist.strings */; };
 		439ED47416F32105009314EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 439ED47316F32105009314EB /* main.m */; };
-		439ED47816F32105009314EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 439ED47716F32105009314EB /* AppDelegate.m */; };
 		439ED47A16F32105009314EB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 439ED47916F32105009314EB /* Default.png */; };
 		439ED47C16F32105009314EB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 439ED47B16F32105009314EB /* Default@2x.png */; };
 		439ED47E16F32105009314EB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 439ED47D16F32105009314EB /* Default-568h@2x.png */; };
@@ -167,7 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				439ED47416F32105009314EB /* main.m in Sources */,
-				439ED47816F32105009314EB /* AppDelegate.m in Sources */,
+				4315BFEE17041F7900FDBF1A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
