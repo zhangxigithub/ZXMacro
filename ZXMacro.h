@@ -7,7 +7,6 @@
  ＊添加到-Prefix.pch文件中,所有类中都可以使用
  
  http://zhangxi.me
- 
  https://github.com/zhangxigithub/ZXMicro
  
  2013.3.26
@@ -56,7 +55,7 @@
 #define ResizableImageWithMode(name,top,left,bottom,right,mode) [[UIImage imageNamed:name] resizableImageWithCapInsets:UIEdgeInsetsMake(top,left,bottom,right) resizingMode:mode]
 
 //file
-
+//读取文件的文本内容,默认编码为UTF-8
 #define FileString(name,ext) [[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:(name) ofType:(ext)] encoding:NSUTF8StringEncoding error:nil]
 
 //数学
