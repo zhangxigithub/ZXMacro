@@ -64,8 +64,8 @@
 #define PI 3.14159
 
 //输出frame(frame是结构体，没法%@)
-#define LOGFRAME(view) NSLog(@"\nx:%f\ny:%f\nwidth:%f\nheight:%f\n",view.frame.origin.x,view.frame.origin.y,view.frame.size.width,view.frame.size.height)
-
+#define LOGFRAME(f) NSLog(@"\nx:%f\ny:%f\nwidth:%f\nheight:%f\n",f.origin.x,f.origin.y,f.size.width,f.size.height)
+#define LOGBOOL(b)  NSLog(@"%@",b?@"YES":@"NO");
 //弹出信息
 #define ALERT(msg) [[[UIAlertView alloc] initWithTitle:nil message:msg delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil] show]
 
