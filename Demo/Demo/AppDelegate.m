@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <QuartzCore/QuartzCore.h>
+
 #import "ZXMacro.h"
 
 @implementation AppDelegate
@@ -17,6 +19,17 @@
 
     NSLog(@"%@",kApp.window);
     NSLog(@"%f",iOS);
+    
+
+    
+
+    __block AppDelegate *blockSelf = self;
+
+    aBlock=^{
+        [blockSelf->item objectAtIndex:0];
+        [blockSelf log];
+    };
+    aBlock();
     
 
     
@@ -35,5 +48,9 @@
     
     [self.window makeKeyAndVisible];
     return YES;
+}
+-(void)log
+{
+    NSLog(@"self log");
 }
 @end

@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+{
+    NSArray *item;
+    void (^aBlock)();
+}
 @property (strong, nonatomic) UIWindow *window;
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33FB4F4D1708039800C1D95C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FB4F4C1708039800C1D95C /* QuartzCore.framework */; };
 		4315BFEE17041F7900FDBF1A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 439ED47716F32105009314EB /* AppDelegate.m */; };
 		4315BFF01704215C00FDBF1A /* text.text in Resources */ = {isa = PBXBuildFile; fileRef = 4315BFEF1704215C00FDBF1A /* text.text */; };
 		439ED46816F32105009314EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439ED46716F32105009314EB /* UIKit.framework */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33FB4F4C1708039800C1D95C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4315BFEF1704215C00FDBF1A /* text.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.text; sourceTree = "<group>"; };
 		439ED46416F32105009314EB /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439ED46716F32105009314EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -42,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33FB4F4D1708039800C1D95C /* QuartzCore.framework in Frameworks */,
 				439ED46816F32105009314EB /* UIKit.framework in Frameworks */,
 				439ED46A16F32105009314EB /* Foundation.framework in Frameworks */,
 				439ED46C16F32105009314EB /* CoreGraphics.framework in Frameworks */,
@@ -54,6 +57,7 @@
 		439ED45B16F32105009314EB = {
 			isa = PBXGroup;
 			children = (
+				33FB4F4C1708039800C1D95C /* QuartzCore.framework */,
 				439ED46D16F32105009314EB /* Demo */,
 				439ED46616F32105009314EB /* Frameworks */,
 				439ED46516F32105009314EB /* Products */,
