@@ -33,6 +33,23 @@
     
 
     
+    
+    VoidBlock block = ^{
+        ALERT(@"block");
+    };
+    block();
+    
+    
+    
+    IDBlock b2 = ^{
+    return @"ddddddd";
+    };
+    NSLog(@"%@",b2());
+    
+
+    
+    
+    
     NSString *path = [[NSBundle mainBundle] pathForResource:@"text" ofType:@"text"];
     NSString *string = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
 

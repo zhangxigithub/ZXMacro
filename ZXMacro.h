@@ -47,6 +47,11 @@
 // compiling without ARC
 #endif
 
+//Block
+typedef void(^VoidBlock)();
+typedef BOOL(^BoolBlock)();
+typedef int (^IntBlock) ();
+typedef id  (^IDBlock) ();
 
 //Image
 //可拉伸的图片
