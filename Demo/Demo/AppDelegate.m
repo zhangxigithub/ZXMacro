@@ -47,7 +47,12 @@
     NSLog(@"%@",b2());
     
 
+    IntBlock_int b3 = ^(int index)
+    {
+        return index+10;
+    };
     
+    NSLog(@"%d",b3(20));
     
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"text" ofType:@"text"];
