@@ -68,6 +68,12 @@ typedef BOOL(^BoolBlock_id)(id);
 typedef int (^IntBlock_id) (id);
 typedef id  (^IDBlock_id)  (id);
 
+
+//System
+#define PasteString(string)   [[UIPasteboard generalPasteboard] setString:string];
+#define PasteImage(image)     [[UIPasteboard generalPasteboard] setImage:image];
+
+
 //Image
 //可拉伸的图片
 
